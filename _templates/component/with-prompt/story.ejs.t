@@ -1,5 +1,5 @@
 ---
-to: app/components/ui/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.stories.tsx
+to: "<%= type == 'ui' ? `app/components/ui/${h.changeCase.pascal(name)}/${h.changeCase.pascal(name)}.stories.tsx` : null %>"
 ---
 
 import type { Meta, StoryObj } from '@storybook/react';

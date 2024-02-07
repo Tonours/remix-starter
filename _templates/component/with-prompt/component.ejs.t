@@ -1,5 +1,5 @@
 ---
-to: app/components/ui/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.tsx
+to: "<%= type == 'ui' ? `app/components/ui/${h.changeCase.pascal(name)}/${h.changeCase.pascal(name)}.tsx` : `app/components/${h.changeCase.pascal(name)}/${h.changeCase.pascal(name)}.tsx` %>"
 ---
 
 import clsx from 'clsx';

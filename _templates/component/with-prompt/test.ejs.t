@@ -1,5 +1,5 @@
 ---
-to: app/components/ui/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.spec.tsx
+to: "<%= type == 'ui' ? `app/components/ui/${h.changeCase.pascal(name)}/${h.changeCase.pascal(name)}.spec.tsx` : `app/components/${h.changeCase.pascal(name)}/${h.changeCase.pascal(name)}.spec.tsx` %>"
 ---
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
