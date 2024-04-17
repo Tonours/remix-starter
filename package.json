@@ -55,15 +55,12 @@
     "storybook": "^7.6.12",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.1.6",
-    "vite": "^5.0.12",
+    "vite": "^5.1.0",
     "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.3.1",
     "vitest": "^1.2.2"
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "resolutions": {
-    "jackspeak": "2.1.1"
   }
 }
