@@ -1,11 +1,5 @@
-import type { MetaFunction } from '@remix-run/node';
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from '@remix-run/react';
+import type { MetaFunction } from 'react-router';
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 
 import './tailwind.css';
 
