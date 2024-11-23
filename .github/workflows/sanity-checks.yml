@@ -13,7 +13,7 @@ jobs:
     name: Setup Dependencies
     runs-on: ubuntu-latest
     outputs:
-      cache-key: ${{ steps.cache-node-modules.outputs.cache-hit }}
+      cache-key: ${{ steps.cache-node-modules.outputs.cache-key }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
