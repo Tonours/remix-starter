@@ -1,12 +1,9 @@
 import { vitePlugin as remix } from '@remix-run/dev';
-import { installGlobals } from '@remix-run/node';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import svgr from 'vite-plugin-svgr'
+import svgr from 'vite-plugin-svgr';
 
-installGlobals();
-
-const isStorybook = process.argv[1]?.includes("storybook");
+const isStorybook = process.argv[1]?.includes('storybook');
 
 export default defineConfig({
   server: {
@@ -16,13 +13,23 @@ export default defineConfig({
     svgr({
       svgrOptions: {
         svgProps: {
-          className: 'icon-svg'
-        }
-      }
+          className: 'icon-svg',
+        },
+      },
     }),
-    !isStorybook && remix({
-      ignoredRouteFiles: ['**/.*'],
-    }),
+    !isStorybook &&
+      remix({
+        ignoredRouteFiles: ['**/.*'],
+        future: {
+          unstable_optimizeDeps: true,
+          v3_fetcherPersist: true,
+          v3_relativeSplatPath: true,
+          v3_throwAbortReason: true,
+          v3_lazyRouteDiscovery: true,
+          v3_singleFetch: true,
+          v3_routeConfig: true,
+        },
+      }),
     tsconfigPaths(),
   ],
 });
